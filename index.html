@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya - Khansa Kirana</title>
+    <!-- Font Google: Plus Jakarta Sans untuk tampilan modern & minimalis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. HEADER & NAVIGASI -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Khansa<span class="dot">.</span></a>
+            </div>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">Tentang Saya</a>
+            </nav>
+
+            <div class="header-action">
+                <a href="about.html" class="btn-talk">Profil Saya &nearr;</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+
+        <!-- 2. HERO SECTION (Layout Minimalis Terinspirasi Referensi Foto) -->
+        <section class="hero">
+            <div class="hero-left">
+                <span class="hero-greeting">Hi, I'm</span>
+                <h1 class="hero-title">Khansa <span class="highlight">Kirana.</span></h1>
+
+                <div class="hero-subtitle">
+                    <p class="role-text">Mahasiswa Teknik Informatika</p>
+                    <p class="location-text">based in Indonesia.</p>
+                </div>
+
+                <p class="hero-desc">
+                    Halo, saya adalah mahasiswa yang sedang mempelajari
+                    pemrograman web dasar menggunakan HTML, CSS, JavaScript, dan integrasi API
+                    untuk menghasilkan tampilan web yang rapi, modern, dan fungsional.
+                </p>
+
+                <!-- Tombol pemanggil fungsi JS bukaProfil() -->
+                <div class="hero-actions">
+                    <button type="button" class="btn-primary" onclick="bukaProfil()">
+                        Lihat Profil &rarr;
+                    </button>
+                    <a href="about.html" class="btn-secondary">
+                        Tentang Saya &nbsp;&#128100;
+                    </a>
+                </div>
+
+                <!-- Wadah pesan loading dari JavaScript saat tombol ditekan -->
+                <p id="loading"></p>
+            </div>
+
+            <div class="hero-right">
+                <div class="avatar-card-wrapper">
+                    <!-- Foto Profil Khansa -->
+                    <div class="avatar-circle">
+                        <img
+                            src="https://th.bing.com/th/id/OIP.aFDxeaq3Y0AaiCfVFk0VvQAAAA?w=108&h=108&c=1&bgcl=7daeda&r=0&o=7&dpr=2&pid=ImgRC&rm=3"
+                            alt="Foto Profil Khansa Kirana"
+                        >
+                    </div>
+
+                    <!-- Floating Card status seperti pada contoh foto -->
+                    <div class="floating-badge">
+                        <div class="badge-status">
+                            <span class="status-dot-pulse"></span>
+                            <span class="badge-status-text">Mahasiswa Aktif</span>
+                        </div>
+                        <p class="badge-detail">Penilaian Praktikum Pemrograman Web</p>
+                        <a href="about.html" class="badge-link">&rarr; Data Diri Lengkap</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STRIP TEKNOLOGI -->
+        <div class="tech-strip">
+            <span class="tech-strip-label">Teknologi Pembelajaran:</span>
+            <div class="tech-strip-items">
+                <span class="tech-item">&#9679; HTML5</span>
+                <span class="tech-item">&#9679; CSS3</span>
+                <span class="tech-item">&#9679; JavaScript ES6</span>
+                <span class="tech-item">&#9679; REST API Fetch</span>
+            </div>
+        </div>
+
+        <!-- 3. KARTU MATERI WEB (.content & .card) -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">SELECTED TOPICS</span>
+                <h2 class="section-title">Fondasi Pemrograman Web</h2>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="card-badge">Struktur</div>
+                    <h3>HTML</h3>
+                    <p>
+                        HTML digunakan untuk membuat struktur dasar
+                        sebuah halaman website secara semantik dan teratur.
+                    </p>
+                    <div class="card-footer-icon">&rarr;</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge">Desain</div>
+                    <h3>CSS</h3>
+                    <p>
+                        CSS digunakan untuk mengatur tampilan,
+                        warna, layout responsif, dan estetika desain website.
+                    </p>
+                    <div class="card-footer-icon">&rarr;</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge">Logika</div>
+                    <h3>Pemrograman Web</h3>
+                    <p>
+                        Pemrograman web mempelajari cara membuat
+                        aplikasi berbasis website yang interaktif dan dinamis.
+                    </p>
+                    <div class="card-footer-icon">&rarr;</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. BAGIAN API (CARD TERTATA & MODERN) -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">INTEGRASI LIVE DATA</span>
+                <h2 class="section-title">Informasi dari REST API</h2>
+            </div>
+
+            <!-- Menggunakan ID #fakta dan ID elemen yang sama agar JavaScript bekerja sempurna -->
+            <section id="fakta" class="api-card">
+                <div class="api-card-top">
+                    <div class="api-status-wrap">
+                        <span class="api-indicator"></span>
+                        <!-- Status pemuatan API -->
+                        <p id="api-status">Sedang mengambil data dari API...</p>
+                    </div>
+
+                    <!-- Tombol Muat Ulang API -->
+                    <button type="button" class="btn-refresh" onclick="ambilDataAPI()">
+                        <span class="refresh-symbol">&#8635;</span> Muat Ulang Data API
+                    </button>
+                </div>
+
+                <div class="api-card-body">
+                    <span class="api-source-badge">Live API &bull; JSONPlaceholder (/posts/1)</span>
+                    <!-- Judul dari data API -->
+                    <h3 id="api-title" class="api-title"></h3>
+                    <!-- Isi dari data API -->
+                    <p id="api-body" class="api-body"></p>
+                </div>
+
+                <div class="api-card-footer">
+                    <span>&#10003; Menggunakan <code>fetch()</code> async/await, JavaScript DOM manipulation, dan response JSON.</span>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- 5. FOOTER MINIMALIS -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h4>Khansa Kirana Putri Paraswati</h4>
+                <p>Website Portofolio Tugas Penilaian Pemrograman Web</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Portofolio Saya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
