@@ -121,8 +121,3 @@ web-bu-bela/
 
 ---
 
-## ✍️ Catatan Penutup
-
-Website ini dirancang dan dikembangkan dengan memperhatikan standar kerapian kode semantik, estetika UI/UX, fungsionalitas logika JavaScript, serta integrasi data asinkron. Seluruh instruksi dan kriteria tugas praktikum telah dipenuhi.
-
-**Terima kasih kepada Bu Bela atas bimbingan materi perkuliahan Pemrograman Web.**
